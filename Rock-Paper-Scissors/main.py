@@ -31,12 +31,12 @@ print(f"Computer chose {computer_play}")
 print(hand_gestures[computer_play])
 
 if user_play == computer_play:
-  print("Draw!")
+    print("Draw!")
 elif user_play == 0 and computer_play == 2:
-  print("User wins!")
+    print("User wins!")
 elif computer_play == 0 and user_play == 2:
-  print("Computer wins!")
+    print("Computer wins!")
 elif computer_play > user_play:
-  print("Computer wins!")
+    print("Computer wins!")
 else:
-  print("User wins!")
+    print("User wins!")
