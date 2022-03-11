@@ -6,7 +6,8 @@ Here's where I'll be logging the little projects I do for 100 days of Code. I'm 
 
 | Day | Project | Progress | Link |
 |-----|---------|----------|------|
-|2|Tip Calculator|Refresh on user input and fun maths!|[Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Tip-Calculator)|
+|1|Band Name Generator|Corny first project to refresh on user input|[Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Band-Name-Generator/main.py)|
+|2|Tip Calculator|Refresh on user input and fun maths!|[Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Tip-Calculator/main.py)|
 |3|Choose your own adventure|Not much learned, just a brain teaser on how to use (inefficient) conditional statements|[Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Treasure-Island)|
 |4|Rock Paper Scissors|Same as day 3|[Repo](https://github.com/paulipotter/Python-100-Days-of-Code/blob/main/Rock-Paper-Scissors/main.py)|
 |5|Random Password Generator|Learned how to shuffle within a list|[Repo](https://github.com/paulipotter/Python-100-Days-of-Code/blob/main/Password-Generator/main.py)|
