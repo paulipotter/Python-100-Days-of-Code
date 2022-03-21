@@ -19,4 +19,3 @@ Here's where I'll be logging the little projects I do for 100 days of Code. I'm 
 
 TO DO:
 Make this md prettier!
-c6p@ok1UwD$FM92P6tpu51yX
