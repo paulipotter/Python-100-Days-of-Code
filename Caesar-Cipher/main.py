@@ -1,26 +1,33 @@
+from pydoc import plain
+from art import logo
+direction, text, shift = "","",""
+restart = True
+
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
-direction = input("Type 'encode' to encrypt, type 'decode' to decrypt: ")
-text = input("Type your message: ").lower()
-shift = int(input("Type the shift number: "))
 
-#TODO-1: Create a function called 'encrypt' that takes the 'text' and 'shift' as inputs.
-def encrypt(plain_txt, shift_amt):
-    for letter in plain_txt:
-        plain_letter = alphabet.index(letter)
-        new_index = plain_letter + shift_amt
-        ciphertext+=alphabet[new_index]
+def caesar(start_txt, shift_amt, cipher_direction):
+    new_text = ""
+    if direction == 'decode':
+            shift_amt *= -1
+    for letter in start_txt:
+        if not letter.isalpha():
+            new_text += letter
+        else:
+            new_position = alphabet.index(letter) + shift_amt
+            new_text += alphabet[new_position]
+    print(f"The {direction}d text is {new_text}")
+    
+print(logo)
 
-#TODO-2: Inside the 'encrypt' function, shift each letter of the 'text' forwards in the alphabet by the shift amount and print the encrypted text.  
-#e.g. 
-#plain_text = "hello"
-#shift = 5
-#cipher_text = "mjqqt"
-#print output: "The encoded text is mjqqt"
-
-##HINT: How do you get the index of an item in a list:
-#https://stackoverflow.com/questions/176918/finding-the-index-of-an-item-in-a-list
-
-##🐛Bug alert: What happens if you try to encode the word 'civilization'?🐛
-
-#TODO-3: Call the encrypt function and pass in the user inputs. You should be able to test the code and encrypt a message. 
+while(restart):
+    direction = input("Type 'encode' to encrypt, type 'decode' to decrypt: ").lower()
+    text = input("Type your message: ").lower()
+    shift = int(input("Type the shift number: "))
+    
+    caesar(text, shift, direction)
+    
+    restart_prompt = input("Would you like to restart the program? Type Y/N: ").lower()
+    if restart_prompt == "n":
+        restart = False
+    
