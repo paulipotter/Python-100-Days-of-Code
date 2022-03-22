@@ -1,10 +1,10 @@
 
-# source: https://www.geeksforgeeks.org/clear-screen-python/
 import os
 from subprocess import call
 from art import *
 
 def clear():
+    # Clear function - source: https://www.geeksforgeeks.org/clear-screen-python/
     _ = call('clear' if os.name =='posix' else 'cls')
     
 def get_winner(bidders):
@@ -15,18 +15,23 @@ def get_winner(bidders):
             winner_amt = bidders[key]
             winner_name = key
     print(f'The winner is {winner_name} with ${winner_amt}')
-    
+
+print(logo)
+print('welcome to the silent auction')
+
 more_bidders = True
-bidders = {}
+bids = {}
+
 while more_bidders:
     bidder_name = input("What is your name? ")
     bidder_bid = int(input("What is your bid? "))
-    other_bidders = input("Are there any other bidders? Type 'yes' or 'no'. ").lower()
+    other_bidders = input("Are there any other bidders? Type 'yes' or 'no'.\n").lower()
     
-    bidders[bidder_name] = bidder_bid
-    
+    bids[bidder_name] = bidder_bid
+    clear()
     if other_bidders == 'yes':
         continue
     else:
-        get_winner(bidders)
+        more_bidders = False
+        get_winner(bids)
     
