@@ -1,4 +1,7 @@
+from math import fabs
 from art import *
+import os
+from subprocess import call
 
 def add(n1, n2):
     """Returns the sum of both parameters"""
@@ -16,30 +19,46 @@ def divide(n1, n2):
     """Returns the product of both parameters"""
     return n1 / n2
 
+def clear():
+    # Clear function - source: https://www.geeksforgeeks.org/clear-screen-python/
+    _ = call('clear' if os.name =='posix' else 'cls')
+
 operations = {
                 "+": add,
                 "-": substract,
                 "/": divide,
                 "*": multiply
             }
-boolean = {
-                "y": True,
-                "n": False
-            }
-keep_going = True
 
-while(keep_going):
+def calculator():
+    print(logo)
+    
+    keep_going = True
     first_number = float(input("What's the first number?: "))
     for symbol in operations:
         print(symbol)
-    operation_request = input("Pick an operation from the line above: ")
-    second_number = float(input("What's the first number?: "))
 
-    #Get the desired 
-    function = operations[operation_request]
-    result = function(first_number, second_number)
+    while(keep_going):
+        operation_request = input("Pick an operation from the line above: ")
+        second_number = float(input("What's the first number?: "))
 
-    print(f"{first_number} {operation_request} {second_number} = {result}")
-    choice = input("Would you like to do another calculation? y/n: ")
-    keep_going = boolean[choice]
+        #Get the desired 
+        function = operations[operation_request]
+        result = function(first_number, second_number)
 
+        print(f"{first_number} {operation_request} {second_number} = {result}")
+        
+        choice = input(f"""Type 'y' to continue calculating with {result}
+Type 'n' to start a new calculation
+Type 'e' to exit: """)
+
+        if  choice == 'y':
+            first_number = result
+            clear()
+        elif choice == 'n':
+            calculator()
+        else:
+            break
+
+
+calculator()
