@@ -1,4 +1,5 @@
 from random import randint
+from art import logo
 EASY_LEVEL = 10
 HARD_LEVEL = 5
 
@@ -21,6 +22,7 @@ def set_difficulty():
         return HARD_LEVEL
 
 def game():
+    print(logo)
     print('Welcome to the Number Guessing Game!')
     print("I'm thinking of a number between 1 and 100")
 
