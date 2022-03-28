@@ -15,8 +15,8 @@ Here's where I'll be logging the little projects I do for 100 days of Code. I'm 
 |7|Hangman!|Refresh on planning code, importing modules|[Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Hangman/main.py)|
 |8|Caesar Cipher|Learned about Positional vs. Keyword Arguments|[Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Caesar-Cipher/main.py)|
 |9|Silent Auction|Refresh on dictionaries and nested structures|[Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Silent-Auction/main.py)|
-|10||Learned about Doctrings and how to store a function name as a value in a dictionary|[Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Calculator/main.py)|
-
+|10|Calculator|Learned about Doctrings and how to store a function name as a value in a dictionary|[Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Calculator/main.py)|
+|11|Blackjack!|Applied knowledge from the previous 10 days|[Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Blackjack/main.py)|
 
 
 TO DO:
