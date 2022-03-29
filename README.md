@@ -17,7 +17,9 @@ Here's where I'll be logging the little projects I do for 100 days of Code. I'm 
 |9|Silent Auction|Refresh on dictionaries and nested structures|[Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Silent-Auction/main.py)|
 |10|Calculator|Learned about Doctrings and how to store a function name as a value in a dictionary|[Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Calculator/main.py)|
 |11|Blackjack!|Applied knowledge from the previous 10 days|[Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Blackjack/main.py)|
-
+|12|Number Guessing Game| Refreshed knowledge re: Scope and learned how to modify global variables within functions (although not recommended!)|[Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Number-Guessing-Game/main.py)|
+|13|N/A|Completed various debugging exercises, no new material learned|N/A|
+|14|Higher Lower Game|
 
 TO DO:
 Make this md prettier!
