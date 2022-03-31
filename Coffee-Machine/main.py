@@ -52,11 +52,12 @@ def check_resources(drink_choice):
 
 
 def process_coins():
-    quarters = float(input("How many quarters? ")) * 0.25
-    dimes = float(input("How many dimes? ")) * 0.1
-    nickles = float(input("How many nickles? ")) * 0.05
-    pennies = float(input("How many pennies? ")) * 0.01
-    return float(quarters + dimes + nickles + pennies)
+    total = 0
+    total += float(input("How many quarters? ")) * 0.25
+    total += float(input("How many dimes? ")) * 0.1
+    total += float(input("How many nickles? ")) * 0.05
+    total += float(input("How many pennies? ")) * 0.01
+    return round(total, 2)
 
 
 def process_transaction(drink, coins):
@@ -86,7 +87,7 @@ def main_menu():
                 user_coins = process_coins()
                 if process_transaction(menu_choice, user_coins):
                     deduct_resources(menu_choice)
-                    print(f"Here's your {menu_choice}, Enjoy!")
+                    print(f"Here's your {menu_choice}, Enjoy! ☕")
         elif menu_choice == 'off':
             print("The machine will now turn off.")
             machine_on = False
