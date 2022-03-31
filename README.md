@@ -21,5 +21,7 @@ Here's where I'll be logging the little projects I do for 100 days of Code. I'm 
 | 13  | N/A                       | Completed various debugging exercises, no new material learned                                                        | N/A                                                                                                                                                                |
 | 14  | Higher Lower Game         | Apply previous knowledge and refreshed debugging skills!                                                              | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Number-Guessing-Game/main.py)                                                              |
 | 15  | Coffee Machine Menu       | Continue practicing previous knowledge and started using pycharm again!                                                | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Coffee-Machine/main.py)                                                                    |
+
+
 TO DO:
 Make this md prettier!
