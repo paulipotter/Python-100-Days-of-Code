@@ -32,6 +32,15 @@ resources = {
 }
 
 
+money = 0
+
+
+def deduct_resources(drink_choice):
+    drink_recipe = MENU[drink_choice]['ingredients']
+    for ingredient in drink_recipe:
+        resources[ingredient] -= drink_recipe[ingredient]
+
+
 def check_resources(drink_choice):
     enough_resources = True
     drink_recipe = MENU[drink_choice]['ingredients']
@@ -43,19 +52,41 @@ def check_resources(drink_choice):
 
 
 def process_coins():
-    print()
+    quarters = float(input("How many quarters? ")) * 0.25
+    dimes = float(input("How many dimes? ")) * 0.1
+    nickles = float(input("How many nickles? ")) * 0.05
+    pennies = float(input("How many pennies? ")) * 0.01
+    return float(quarters + dimes + nickles + pennies)
+
+
+def process_transaction(drink, coins):
+    success = False
+    drink_cost = MENU[drink]['cost']
+    if drink_cost > coins:
+        print("Sorry that's not enough money. Money refunded.")
+        return success
+    elif drink_cost <= coins:
+        success = True
+        change = round(coins - drink_cost, 2)
+        print(f"Here's ${change} in change.")
+        global money
+        money += drink_cost
+        return success
+
 
 def main_menu():
     machine_on = True
-    money = 0
     while machine_on:
-        menu_choice = input("What would you like? (espresso/latte/cappuccino):")
+        menu_choice = input("What would you like? (espresso/latte/cappuccino): ")
 
         if menu_choice == 'espresso' or menu_choice == 'latte' or menu_choice == 'capuccino':
             if not check_resources(menu_choice):
                 continue
             else:
-                print()
+                user_coins = process_coins()
+                if process_transaction(menu_choice, user_coins):
+                    deduct_resources(menu_choice)
+                    print(f"Here's your {menu_choice}, Enjoy!")
         elif menu_choice == 'off':
             print("The machine will now turn off.")
             machine_on = False
@@ -64,7 +95,7 @@ def main_menu():
             print(f"Water: {resources['water']}ml")
             print(f"Milk: {resources['milk']}ml")
             print(f"Coffee: {resources['coffee']}g")
-            print(f"Money: {money}")
+            print(f"Money: ${money}")
 
 
 main_menu()
