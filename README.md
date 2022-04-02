@@ -22,6 +22,8 @@ Here's where I'll be logging the little projects I do for 100 days of Code. I'm 
 | 14  | Higher Lower Game         | Apply previous knowledge and refreshed debugging skills!                                                              | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Number-Guessing-Game/main.py)                                                              |
 | 15  | Coffee Machine Menu       | Continue practicing previous knowledge and started using pycharm again!                                               | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Coffee-Machine/main.py)                                                                    |
 | 16  | Coffee Machine Menu       | Intro (refresh) to OOP! Re-did the previous assignment, this time using OOP.                                          | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Coffee-Machine-OOP/main.py)                                                                |
+| 17  | Trivia                    | Continue to practice OOP, this time by making a 'modular' trivia quiz app.                                            | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Trivia/main.py)                                                                            |
+
 
 TO DO:
 Make this md prettier!
