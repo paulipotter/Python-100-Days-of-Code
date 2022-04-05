@@ -1,7 +1,8 @@
 from random import choice
 import colorgram
 import turtle as t
-
+s = t.Screen()
+s.setup(width=500, height=500)
 rgb_list = []
 colors = colorgram.extract('img.png', 15)
 
@@ -19,7 +20,7 @@ draw.hideturtle()
 draw.bk(200)
 draw.pensize(10)
 draw.setheading(90)
-draw.forward(150)
+draw.forward(170)
 draw.setheading(360)
 
 for _ in range(height):
@@ -32,7 +33,7 @@ for _ in range(height):
     draw.forward(dot_distance)
     draw.left(90)
     
-s = t.Screen()
+
 s.exitonclick()
 
     
