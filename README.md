@@ -23,7 +23,7 @@ Here's where I'll be logging the little projects I do for 100 days of Code. I'm 
 | 15  | Coffee Machine Menu       | Continue practicing previous knowledge and started using pycharm again!                                               | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Coffee-Machine/main.py)                                                                    |
 | 16  | Coffee Machine Menu       | Intro (refresh) to OOP! Re-did the previous assignment, this time using OOP.                                          | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Coffee-Machine-OOP/main.py)                                                                |
 | 17  | Trivia                    | Continue to practice OOP, this time by making a 'modular' trivia quiz app.                                            | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Trivia/main.py)                                                                         |
-| 17  | Hirst Painting            | Intro to Python GUI/external libraries, refresher on how to use documentation properly                                            | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Hirst-Painting/main.py)                                                                            |
+| 18  | Hirst Painting            | Intro to Python GUI/external libraries, refresher on how to use documentation properly                                            | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Hirst-Painting/main.py)                                                                            |
 
 
 TO DO:
