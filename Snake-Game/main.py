@@ -10,6 +10,12 @@ screen.tracer(0)
 boundaries = [-280, 280]
 snake = Snake()
 
+screen.listen()
+screen.onkey(snake.up, "Up")
+screen.onkey(snake.down, "Down")
+screen.onkey(snake.right, "Right")
+screen.onkey(snake.left, "Left")
+
 screen.update()
 game_over = False
 while not game_over:
