@@ -25,6 +25,8 @@ while not game_over:
     time.sleep(0.09)
     snake.move()
 
+    if snake.head.distance(food) < 15:
+        food.new_location()
 
 
 
