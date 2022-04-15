@@ -27,6 +27,7 @@ Here's where I'll be logging the little projects I do for 100 days of Code. I'm 
 | 19    | Turtle Race               | Continuing to refresh on using external libraries, reading documentation and applying it correctly to make fun things!!! | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Turtle-Race/main.py)                                                                       |
 | 20-21 | Snake Game                | Apply OOP knowledge, documentation and small baby steps to make a snake game!                                            | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Snake-Game/main.py)                                                                        |
 | 22    | Pong!                     | Apply superclass knowledge and how to break up a big project into smaller pieces                                         | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Pong/main.py)                                                                              |
+| 23    | Turtle Crossing           | Second Capstone project where I got to apply the acquired knowledge from the last few days on how to create a game from scratch using Turtle Graphics.                                         | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Turtle-Crossing/main.py)                                                                              |
 
 TO DO:
 Make this md prettier!
