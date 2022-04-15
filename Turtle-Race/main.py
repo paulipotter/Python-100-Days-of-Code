@@ -23,8 +23,7 @@ if guess:
     racing = True 
 
 while racing:
-    
-    for turtle in all_turtles: 
+    for turtle in all_turtles:
         if turtle.xcor() > 220:
             winner = turtle.pencolor()
             racing = False
