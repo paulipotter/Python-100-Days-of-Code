@@ -29,6 +29,6 @@ Here's where I'll be logging the little projects I do for 100 days of Code. I'm 
 | 22    | Pong!                     | Apply superclass knowledge and how to break up a big project into smaller pieces                                                                       | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Pong/main.py)                                                                              |
 | 23    | Turtle Crossing           | Second Capstone project where I got to apply the acquired knowledge from the last few days on how to create a game from scratch using Turtle Graphics. | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Turtle-Crossing/main.py)                                                                   |
 | 24    | Mail-Merge                | Refresh on File I/O and Relative Directories. Also, learned about the replace() function, how handy is that!                                           | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Mail-Merge/main.py)                                                                        |
-
+| 24    | Guess The State!          | Intro (and refresh!) on/to pandas library and how to parse through a csv file                                                                          | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Guess-The-State/main.py)                                                                   |
 TO DO:
 Make this md prettier!
