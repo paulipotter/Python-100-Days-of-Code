@@ -4,6 +4,7 @@ Hello, fellow internet human!
 
 Here's where I'll be logging the little projects I do for 100 days of Code. I'm following [Dr. Angela Yu's Udemy Course](https://www.udemy.com/course/100-days-of-code/)
 
+
 | Day   | Project                   | Progress                                                                                                                                                        | Link                                                                                                                                                               |
 |-------|---------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1     | Band Name Generator       | Corny first project to refresh on user input                                                                                                                    | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Band-Name-Generator/main.py)                                                               |
@@ -30,8 +31,9 @@ Here's where I'll be logging the little projects I do for 100 days of Code. I'm 
 | 23    | Turtle Crossing           | Second Capstone project where I got to apply the acquired knowledge from the last few days on how to create a game from scratch using Turtle Graphics.          | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Turtle-Crossing/main.py)                                                                   |
 | 24    | Mail-Merge                | Refresh on File I/O and Relative Directories. Also, learned about the replace() function, how handy is that!                                                    | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Mail-Merge/main.py)                                                                        |
 | 25    | Guess The State!          | Intro (and refresh!) on/to pandas library and how to parse through a csv file                                                                                   | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Guess-The-State/main.py)                                                                   |
-| 26    | Nato Alphabet             | Learn how to use and apply list and dictionary comprehension to shorten code. I knew a bit about this before but this lesson really helped cement the knowledge | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Nato-Alphabet/main.py)                                                                     |
+| 26    | Nato Alphabet             | Guide through using list and dict comprehension. I knew about this before, but this lesson truly helped cement the knowledge <3 | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Nato-Alphabet/main.py)                                                                     |
 | 27    | Mile to Km Converter      | Intro to tkinter, how to use components. Learn about *args and **kwargs! Build a GUI program using tkinter.                                                     | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Distance-Unit-Converter/main.py)                                                           |
+
 
 TO DO:
 Make this md prettier!
