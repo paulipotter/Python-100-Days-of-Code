@@ -1,10 +1,10 @@
 # Python-100-Days-of-Code
 
-Hello, fellow internet human!
+Hello, fellow internet human! 👋
 
-Here's where I'll be logging the little projects I do for 100 days of Code. I'm following [Dr. Angela Yu's Udemy Course](https://www.udemy.com/course/100-days-of-code/)
+What you'll see below is a log for every project I do for 100 days of Python Code. I'm following [Dr. Angela Yu's Udemy Course](https://www.udemy.com/course/100-days-of-code/)
 
-## Beginner
+## Beginner 🐣
 | Day   | Project                   | Progress                                                                                                                                               | Link                                                                                                                                                               |
 |-------|---------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1     | Band Name Generator       | Corny first project to refresh on user input                                                                                                           | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Band-Name-Generator/main.py)                                                               |
@@ -22,7 +22,7 @@ Here's where I'll be logging the little projects I do for 100 days of Code. I'm 
 | 13    | N/A                       | Completed various debugging exercises, no new material learned                                                                                         | N/A                                                                                                                                                                |
 | 14    | Higher Lower Game         | Apply previous knowledge and refreshed debugging skills!                                                                                               | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Number-Guessing-Game/main.py)                                                              |
 
-## Intermediate
+## Intermediate 🐥
 
 | Day   | Project                   | Progress                                                                                                                                               | Link                                                                                                                                                               |
 |-------|---------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
