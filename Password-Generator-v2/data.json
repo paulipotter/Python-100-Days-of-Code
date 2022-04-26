@@ -1,0 +1,14 @@
+{
+    "some website": {
+        "email": "email@example.com",
+        "password": "T-E%44YPWJPA"
+    },
+    "ebay": {
+        "email": "email@example.com",
+        "password": "&LVG6UZ%FWU6$L2D*1"
+    },
+    "starbucks": {
+        "email": "email@example.com",
+        "password": "NX$YR&51PM37-HRC@I"
+    }
+}
