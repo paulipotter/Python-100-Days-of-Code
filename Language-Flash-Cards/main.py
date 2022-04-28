@@ -9,10 +9,17 @@ KEYWORD_FONT = ("Ariel", 60, "bold")
 FRENCH = "French"
 ENGLISH = "English"
 
-data = pandas.read_csv('./data/french_words.csv')
-# Read Dict
-vocab_to_learn = data.to_dict(orient="records")
+vocab_to_learn = {}
 current_card = {}
+
+try:
+    data = pandas.read_csv('./data/french_words.csv')
+except FileNotFoundError:
+    original_data = pandas.read_csv("data/french_words.csv")
+    vocab_to_learn = original_data.to_dict(orient="records")
+else:
+    vocab_to_learn = data.to_dict(orient="records")
+
 
 def next_card():
     global current_card, flip_timer
@@ -32,6 +39,12 @@ def flip_card():
     canvas.itemconfig(card_background, image=flash_card_back)
 
 
+def is_known():
+    vocab_to_learn.remove(current_card)
+    data = pandas.DataFrame(vocab_to_learn)
+    data.to_csv('./data/words_to_learn.csv', index=False)
+    next_card()
+
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
 window.config(padx=50, pady=50, bg=BACKGROUND_COLOR)
@@ -46,7 +59,6 @@ canvas.grid(row=0, column=0, columnspan=2)
 card_language = canvas.create_text(400, 150, font=LANGUAGE_FONT, text='')
 card_term = canvas.create_text(400, 263, font=KEYWORD_FONT, text='')
 
-#flash_card_back = PhotoImage(file='./images/card_back.png')
 
 right_logo = PhotoImage(file='./images/right.png')
 right_button = Button(image=right_logo, highlightthickness=0, command=next_card)
@@ -56,5 +68,5 @@ wrong_logo = PhotoImage(file='./images/wrong.png')
 wrong_button = Button(image=wrong_logo, highlightthickness=0, command=next_card)
 wrong_button.grid(row=1, column=0)
 
-
+next_card()
 window.mainloop()
