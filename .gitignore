@@ -128,4 +128,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-./Automated-Birthday-Wisher/credentials.py
+Automated-Birthday-Wisher/credentials.py
+Automated-Birthday-Wisher/Practice Files/credentials.py
