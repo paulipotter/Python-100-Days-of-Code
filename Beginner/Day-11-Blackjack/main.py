@@ -35,7 +35,7 @@ def compare(user_score, dealer_score):
     if user_score == dealer_score:
         return "It's a draw!\n"
     elif user_score == 0:
-        return "Win with a Blackjack!\n"
+        return "Win with a Day-11-Blackjack!\n"
     elif user_score > 21:
         return "Your score is over 21. You lose!\n"
     elif user_score > dealer_score:
@@ -60,7 +60,7 @@ def blackjack():
         print(f"\nYour cards: {user_cards}, your score: {user_score}")
         print(f"Computer's first card: {dealer_cards[0]}\n")
 
-        #Check if any have a Blackjack or if user already lost - If so, game over
+        #Check if any have a Day-11-Blackjack or if user already lost - If so, game over
         if user_score == 0 or dealer_score == 0 or user_score > 21:
             game_over = True
         else:        
@@ -80,6 +80,6 @@ def blackjack():
     print(compare(user_score, dealer_score))
 
         
-while input("Would you like to play a game of Blackjack? Type 'y' or 'n': ") == "y":
+while input("Would you like to play a game of Day-11-Blackjack? Type 'y' or 'n': ") == "y":
   clear()
   blackjack()
