@@ -46,10 +46,13 @@ What you'll see below is a log for every project I do for 100 days of Python Cod
 
 ## Intermediate++ 🐤
 
-| Day | Project                   | Progress                                                                                    | Link                                                                                                                             |
-|-----|---------------------------|---------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
-| 32  | Automated Birthday wisher | Intro to using smtp in python, refresh on Datetime module.                                  | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Intermediate++/Day-32-Automated-Birthday-Wisher/main.py) |
-| 33  | ISS Overhead notifier     | Apply API, smtp, and pandas. Notifies the user when the ISS is visible in the sky at night. | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Intermediate++/Day-33-ISS-Overhead-Notifier)             |
-| 33  | Quizzler                  | Apply API, tkinter to build from the previous app to create a GUI quiz app!                 | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Intermediate++/Day-33-ISS-Overhead-Notifier)             |
+| Day | Project                   | Progress                                                   | Link                                                                                                                             |
+|-----|---------------------------|------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
+| 32  | Automated Birthday wisher | Intro to using smtp in python, refresh on Datetime module. | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Intermediate++/Day-32-Automated-Birthday-Wisher/main.py) |
+| 33  | Automated Birthday wisher | Intro to using smtp in python, refresh on Datetime module. | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Intermediate++/Day-33-ISS-Overhead-Notifier)             |
+
+
+| 35  | Rain Check | Intro to API Keys, environment variables, Twilio API. | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Intermediate++/Day-35-Rain-Alert/main.py)             |
+
 TO DO:
 Make this md prettier!
