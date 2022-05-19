@@ -2,57 +2,68 @@ import requests
 import os
 from twilio.rest import Client
 from datetime import date, timedelta
-
-
-STOCK = "BTC"
-COMPANY_NAME = "Tesla Inc"
-alpha_vantage_key = 'V4PSMGZ1Q77R5X27'
 STOCK_ENDPOINT = "https://www.alphavantage.co/query"
 NEWS_ENDPOINT = "https://newsapi.org/v2/everything"
+STOCK = "MSFT"
+COMPANY_NAME = "Microsoft"
+account_sid = os.environ.get("TWILIO_ACCOUNT_SID")
+auth_token = os.environ.get("TWILIO_AUTH_TOKEN")
 
-stock_params = {
-    'function': 'TIME_SERIES_DAILY',
-    'symbol': STOCK,
-    'interval': '60min',
-    'apikey': alpha_vantage_key,
-    'outputsize': 'compact',
-}
+def get_stock_closing_difference():
+    alpha_vantage_key = 'V4PSMGZ1Q77R5X27'
+    stock_params = {
+        'function': 'TIME_SERIES_DAILY',
+        'symbol': STOCK,
+        'interval': '60min',
+        'apikey': alpha_vantage_key,
+        'outputsize': 'compact',
+    }
 
-response = requests.get(STOCK_ENDPOINT, params=stock_params)
-response.raise_for_status()
-data = response.json()
-print(data)
+    #  retrieve stock info
+    response = requests.get(STOCK_ENDPOINT, params=stock_params)
+    response.raise_for_status()
+    data = response.json()
+    print(data)
 
-today = date.today()
-yesterday = today - timedelta(days=1)
-closing_yesterday = float(data['Time Series (Daily)'][str(yesterday)]['4. close'])
+    today = date.today()  # get today's date
 
-day_before_yesterday = today - timedelta(days=2)
-closing_day_before_yesterday = float(data['Time Series (Daily)'][str(day_before_yesterday)]['4. close'])
+    yesterday = today - timedelta(days=1)  # get yesterday's date
+    closing_yesterday = float(data['Time Series (Daily)'][str(yesterday)]['4. close'])  # get yesterday's closing price
 
-difference = round(abs(closing_yesterday - closing_day_before_yesterday), 2)
-print(difference)
-percentage = round((difference / closing_yesterday)*100, 2)
-print(percentage)
+    day_before_yesterday = today - timedelta(days=2)
+    closing_day_before_yesterday = float(data['Time Series (Daily)'][str(day_before_yesterday)]['4. close'])
 
-if percentage > 5:
-    print('get news')
+    # get the absolute value difference of the closing price of both days
+    difference = round(abs(closing_yesterday - closing_day_before_yesterday), 2)
 
-
-
-## STEP 1: Use https://newsapi.org/docs/endpoints/everything
-# When STOCK price increase/decreases by 5% between yesterday and the day before yesterday then print("Get News").
-#HINT 1: Get the closing price for yesterday and the day before yesterday. Find the positive difference between the two prices. e.g. 40 - 20 = -20, but the positive difference is 20.
-#HINT 2: Work out the value of 5% of yerstday's closing stock price. 
-
+    percentage = round((difference / closing_yesterday)*100, 2)  # calculate the percentage of such difference
+    return percentage
 
 
-## STEP 2: Use https://newsapi.org/docs/endpoints/everything
-# Instead of printing ("Get News"), actually fetch the first 3 articles for the COMPANY_NAME. 
-#HINT 1: Think about using the Python Slice Operator
+def get_news_articles():
+    news_key = 'f22ecbcb1a77458aab97a1654f08487e'
+    news_params = {
+        'apiKey': news_key,
+        'q': 'Microsoft',
+        'language': 'en',
+    }
+    response = requests.get(NEWS_ENDPOINT, params=news_params)
+    response.raise_for_status()
+    data = response.json()
+    return data['articles'][:3]
 
 
+if get_stock_closing_difference > 5:
+    news = get_news_articles()
 
+    client = Client(account_sid, auth_token)
+    message = client.messages \
+        .create(
+        body="It will rain today. Don't forget to use an umbrella ☔️",
+        from_='+16014016076',
+        to='+17853172060'
+    )
+    print(message.status)
 ## STEP 3: Use twilio.com/docs/sms/quickstart/python
 # Send a separate message with each article's title and description to your phone number. 
 #HINT 1: Consider using a List Comprehension.
