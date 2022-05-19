@@ -4,7 +4,7 @@ from twilio.rest import Client
 from datetime import date, timedelta
 
 
-STOCK = "TSLA"
+STOCK = "BTC"
 COMPANY_NAME = "Tesla Inc"
 alpha_vantage_key = 'V4PSMGZ1Q77R5X27'
 STOCK_ENDPOINT = "https://www.alphavantage.co/query"
@@ -15,7 +15,7 @@ stock_params = {
     'symbol': STOCK,
     'interval': '60min',
     'apikey': alpha_vantage_key,
-    'outputsize': 'compact'
+    'outputsize': 'compact',
 }
 
 response = requests.get(STOCK_ENDPOINT, params=stock_params)
