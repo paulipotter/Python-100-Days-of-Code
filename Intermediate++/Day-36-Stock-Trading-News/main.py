@@ -6,12 +6,12 @@ STOCK_ENDPOINT = "https://www.alphavantage.co/query"
 NEWS_ENDPOINT = "https://newsapi.org/v2/everything"
 STOCK = "MSFT"
 COMPANY_NAME = "Microsoft"
-account_sid = 'ACdac30f54c815432d902a0e3e73e21dd3'
-auth_token = 'd8e22b84f5b0871822572e5330f401b1'
+account_sid = ''
+auth_token = ''
 
 
 def get_stock_closing_difference():
-    alpha_vantage_key = 'V4PSMGZ1Q77R5X27'
+    alpha_vantage_key = ''
     stock_params = {
         'function': 'TIME_SERIES_DAILY',
         'symbol': STOCK,
@@ -42,7 +42,7 @@ def get_stock_closing_difference():
 
 
 def get_news_articles():
-    news_key = 'f22ecbcb1a77458aab97a1654f08487e'
+    news_key = ''
     news_params = {
         'apiKey': news_key,
         'qInTitle': 'Microsoft',
@@ -71,7 +71,7 @@ if abs(difference) > 5:
         message = client.messages \
             .create(
             body=item,
-            from_='+16014016076',
-            to='+17853172060'
+            from_='',
+            to=''
         )
         print(message.status)
