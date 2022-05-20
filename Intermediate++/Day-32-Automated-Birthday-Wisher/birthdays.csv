@@ -1,7 +1,7 @@
 name,email,year,month,day
 Test,test@email.com,1961,12,21
-Nomi, paulatestssmtp@yahoo.com,2017,5,27
-Annika, paulatestssmtp@yahoo.com,2017,12,4
-Willie, paulatestssmtp@gmail.com,2015,10,5
-Artemis, paulatestssmtp@gmail.com,2019,7,19
-Avocado, paulatestssmtp@yahoo.com,2017,4,28
+Nomi, email@yahoo.com,2017,5,27
+Annika, email@yahoo.com,2017,12,4
+Willie, email@gmail.com,2015,10,5
+Artemis, email@gmail.com,2019,7,19
+Avocado, email@yahoo.com,2017,4,28
