@@ -52,7 +52,8 @@ What you'll see below is a log for every project I do for 100 days of Python Cod
 | 33  | ISS Overhead Notifier     | ...                                                                    | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Intermediate++/Day-33-ISS-Overhead-Notifier)             |
 | 34  | Quizzler                  | ...                                                                    | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Intermediate++/Day-34-Quizzler)                          |
 | 35  | Rain Check                | Intro to API 🔑, environment variables, Twilio API.                    | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Intermediate++/Day-35-Rain-Alert/main.py)                |
-| 36  | Habit Tracker             | Intro to Pixela, cont API 🔑, tips on how to read and ingest API docs. | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Intermediate++/Day-35-Rain-Alert/main.py)                |
+| 36  | Stock Trading News        | Cont. practice to retrieve information using API requests.             | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Intermediate++/Day-35-Stock-Trading-News/main.py)        |
+| 37  | Habit Tracker             | Intro to Pixela, cont API 🔑, tips on how to read and ingest API docs. | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Intermediate++/Day-35-Rain-Alert/main.py)                |
 
 
 TO DO:
