@@ -3,7 +3,7 @@ from datetime import datetime
 import pandas as pd
 from random import randint
 from smtplib import SMTP
-from credentials import *
+import os
 
 PLACEHOLDER = '[NAME]'
 letters = []
@@ -29,8 +29,8 @@ if today in birthdays_dict:
 
     with SMTP('smtp.gmail.com') as connection:
         connection.starttls()
-        connection.login(user=gmail_address, password=gmail_password)
-        connection.sendmail(from_addr=gmail_address,
+        connection.login(user=os.environ['TEST_SENDER_ADDR'], password=os.environ['TEST_SENDER_PW'])
+        connection.sendmail(from_addr=os.environ['TEST_SENDER_ADDR'],
                             to_addrs=birthday_person['email'],
                             msg=f"Subject: It is your birthday!!\n\n{new_letter}")
 
