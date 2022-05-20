@@ -14,4 +14,15 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
+      - name: Retrieve secrets
+        env:
+            TEST_SENDER_ADDR: ${{ secrets.TEST_SENDER_ADDR }}
+            TEST_SENDER_PW: ${{ secrets.TEST_SENDER_PW }}
+            TEST_RECIPIENT_ADDR: ${{ secrets.TEST_RECIPIENT_ADDR }}
+            RECIPIENT_PHONE_NUMBER: ${{ secrets.RECIPIENT_PHONE_NUMBER }}
+            OPEN_WEATHER_API_KEY: ${{ secrets.OPEN_WEATHER_API_KEY }}
+            SENDER_PHONE_NUMBER: ${{ secrets.SENDER_PHONE_NUMBER }}
+            TWILIO_ACCOUNT_SID: ${{ secrets.TWILIO_ACCOUNT_SID }}
+            TWILIO_AUTH_TOKEN: ${{ secrets.TWILIO_AUTH_TOKEN }}
+
       - run: echo "🍏 This job's status is ${{ job.status }}."
