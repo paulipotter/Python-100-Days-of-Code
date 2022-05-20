@@ -24,5 +24,7 @@ jobs:
             SENDER_PHONE_NUMBER: ${{ secrets.SENDER_PHONE_NUMBER }}
             TWILIO_ACCOUNT_SID: ${{ secrets.TWILIO_ACCOUNT_SID }}
             TWILIO_AUTH_TOKEN: ${{ secrets.TWILIO_AUTH_TOKEN }}
-
+            PIXELA_API_KEY: ${{ secrets.PIXELA_API_KEY }}
+            PIXELA_USER: ${{ secrets.PIXELA_USER }}
+            PIXELA_TOKEN: ${{ secrets.PIXELA_TOKEN }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
