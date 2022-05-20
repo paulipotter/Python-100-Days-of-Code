@@ -29,9 +29,9 @@ if today in birthdays_dict:
 
     with SMTP('smtp.gmail.com') as connection:
         connection.starttls()
-        connection.login(user=os.environ['TEST_SENDER_ADDR'], password=os.environ['TEST_SENDER_PW'])
-        connection.sendmail(from_addr=os.environ['TEST_SENDER_ADDR'],
-                            to_addrs=birthday_person['email'],
+        connection.login(user=os.environ.get('TEST_SENDER_ADDR'), password=os.environ.get('TEST_SENDER_PW'))
+        connection.sendmail(from_addr=os.environ.get('TEST_SENDER_ADDR'),
+                            to_addrs=os.environ.get('RECIPIENT_PHONE_NUMBER'),
                             msg=f"Subject: It is your birthday!!\n\n{new_letter}")
 
 

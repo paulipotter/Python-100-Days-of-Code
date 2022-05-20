@@ -49,7 +49,7 @@ while True:
     if is_iss_overhead() and is_night():
         with SMTP('smtp.gmail.com') as connection:
             connection.starttls()
-            connection.login(user=os.environ['TEST_SENDER_ADDR'], password=os.environ['TEST_RECIPIENT_ADDR'])
-            connection.sendmail(from_addr=os.environ['TEST_SENDER_ADDR'],
-                                to_addrs=os.environ['TEST_RECIPIENT_ADDR'],
+            connection.login(user=os.environ.get('TEST_SENDER_ADDR'), password=os.environ.get('TEST_RECIPIENT_ADDR'))
+            connection.sendmail(from_addr=os.environ.get('TEST_SENDER_ADDR'),
+                                to_addrs=os.environ.get('TEST_RECIPIENT_ADDR'),
                                 msg=f"Subject: Look up!\n\nISS is above you <3")
