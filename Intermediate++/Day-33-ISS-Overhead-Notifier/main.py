@@ -1,8 +1,7 @@
 import requests
 from datetime import datetime
 from smtplib import SMTP
-from credentials import *
-import time
+import time, os
 
 MY_LAT = 32.715736  # Your latitude
 MY_LONG = -117.161087  # Your longitude
@@ -50,7 +49,7 @@ while True:
     if is_iss_overhead() and is_night():
         with SMTP('smtp.gmail.com') as connection:
             connection.starttls()
-            connection.login(user=gmail_address, password=gmail_password)
-            connection.sendmail(from_addr=gmail_address,
-                                to_addrs=gmail_address,
+            connection.login(user=os.environ['TEST_SENDER_ADDR'], password=os.environ['TEST_RECIPIENT_ADDR'])
+            connection.sendmail(from_addr=os.environ['TEST_SENDER_ADDR'],
+                                to_addrs=os.environ['TEST_RECIPIENT_ADDR'],
                                 msg=f"Subject: Look up!\n\nISS is above you <3")
