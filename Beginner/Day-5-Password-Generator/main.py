@@ -12,13 +12,13 @@ count_symbols = int(input("Symbols: "))
 
 password_list = []
 
-for char in range (1,count_letters +1):
+for char in range(1, count_letters + 1):
     password_list.append(choice(alphabet))
 
-for char in range (1,count_numbers +1):
+for char in range(1, count_numbers + 1):
     password_list.append(choice(numbers))
 
-for char in range (1,count_symbols +1):
+for char in range(1, count_symbols + 1):
     password_list.append(choice(symbols))
 
 shuffle(password_list)
