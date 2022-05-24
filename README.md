@@ -58,6 +58,8 @@ What you'll see below is a log for every project I do for 100 days of Python Cod
 | 39  | Capstone I: Flight Tracker | Capstone Project Part I! Apply all knowledge learned in the last few days to search for cheap flights using multiple APIs and OOP. | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Intermediate++/Day-39-Flight-Tracker)                    |
 | 40  | Capstone II: Flight Club   | Capstone Project Part II! Build on the previous day. Added smtp and a sheet sign up to the mix.                                    | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Intermediate++/Day-40-Flight-Club)                       |
 
+| 45  | Top 100 Movies to watch!   | Intro to web scraping, Beautiful Soup and the ethics around it                                    | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Intermediate++/Day-45-Top-Movies)                       |
+
 
 
 TO DO:
