@@ -60,6 +60,7 @@ What you'll see below is a log for every project I do for 100 days of Python Cod
 | 41-44 | HTML and CSS Brush-up!     | Refresh on HTML and CSS before moving on with more Python!                                                                            | [Personal Site](https://paulipotter.github.io)                                                                                   |
 | 45    | Top 100 Movies to watch!   | Intro to web scraping, Beautiful Soup and the ethics around it.                                                                       | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Intermediate++/Day-45-Top-Movies)                        |
 | 46    | Spotify Playlist           | Apply knowledge from the last few days to scrape data from top 100 songs to then create a Spotify Playlist using the Spotipy library. | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Intermediate++/Day-46-Spotify-Playlist/main.py)          |
+| 47    | Price Tracker              | Use beautiful 🥣 to scrape data, keep track of data and use smtp to alert the user when the threshold has been reached.               | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Intermediate++/Day-47-Price-Tracker/main.py)             |
 
 
 
