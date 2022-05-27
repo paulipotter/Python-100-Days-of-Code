@@ -132,8 +132,4 @@ credentials.py
 
 letter_for*.txt
 states_to_*.csv
-.idea/Python-100-Days-of-Code.iml
-.idea/inspectionProfiles/profiles_settings.xml
-.idea/misc.xml
-.idea/modules.xml
-.idea/vcs.xml
+.idea/
