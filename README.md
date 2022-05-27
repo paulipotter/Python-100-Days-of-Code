@@ -46,7 +46,7 @@ What you'll see below is a log for every project I do for 100 days of Python Cod
 
 ## Intermediate++ 🐤
 
-### SMTP, APIs
+### 🐤SMTP, APIs
 | Day   | Project                    | Progress                                                                                                                                                         | Link                                                                                                                             |
 |-------|----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
 | 32    | Automated Birthday wisher  | Intro to using smtp in python, refresh on Datetime module.                                                                                                       | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Intermediate++/Day-32-Automated-Birthday-Wisher/main.py) |
@@ -62,12 +62,22 @@ What you'll see below is a log for every project I do for 100 days of Python Cod
 | 45    | Top 100 Movies to watch!   | Intro to web scraping, Beautiful Soup and the ethics around it.                                                                                                  | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Intermediate++/Day-45-Top-Movies)                        |
 | 46    | Spotify Playlist           | Apply knowledge from the last few days to scrape data from top 100 songs to then create a Spotify Playlist using the Spotipy library.                            | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Intermediate++/Day-46-Spotify-Playlist/main.py)          |
 | 47    | Price Tracker              | Use beautiful 🥣 to scrape data, keep track of data and use smtp to alert the user when the threshold has been reached.                                          | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Intermediate++/Day-47-Price-Tracker/main.py)             |
-| 48    | Browser Bot with Selenium  | Intro to Selenium Library. The lesson unfortunately is currently out of date so I watched the video, did some basic practice but didn't complete the challenge.  | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Intermediate++/Day-48-Selenium-Bot/practice.py)          |
 
-### Web dev
+### 🐤 Web Scraping with Selenium (Deprecated Code)
+| Day | Project                   | Progress                                                                                                                                                        | Link                                                                                                                    |
+|-----|---------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
+| 48  | Browser Bot with Selenium | Intro to Selenium Library. The lesson unfortunately is currently out of date so I watched the video, did some basic practice but didn't complete the challenge. | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Intermediate++/Day-48-Selenium-Bot/practice.py) |
+| 49  | Bot: Linkedin             | Similarly to day 48, the code is now old :( I studied the example and went over the docs. I might come later and do my own version of it.                       | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Intermediate++/Day-49-Linkedin-Bot/main.py)     |
+| 50  | Bot: Tinder               | ...                                                                                                                                                             | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Intermediate++/Day-50-Tinder-Bot/main.py)       |
+| 51  | Bot: Twitter              | ...                                                                                                                                                             | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Intermediate++/Day-51-Twitter-Bot/main.py)      |
+| 52  | Bot: Instagram            | ...                                                                                                                                                             | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Intermediate++/Day-52-Instagram-Bot/main.py)    |
+| 53  | Bot: Data Entry           | ...                                                                                                                                                             | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Intermediate++/Day-53-Data-Entry-Bot/main.py)   |
+
+### 🐤 Web dev
 | Day   | Project                    | Progress                                                                                                                                                         | Link                                                                                                         |
 |-------|----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
 | 54    | Intro to Flask             | Intro to Selenium Library. The lesson unfortunately is currently out of date so I watched the video, did some basic practice but didn't complete the challenge.  | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Intermediate++/Day-54-Flask) |
+
 
 
 TO DO:
