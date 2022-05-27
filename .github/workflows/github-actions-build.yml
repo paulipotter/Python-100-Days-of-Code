@@ -29,12 +29,8 @@ jobs:
           TWILIO_ACCOUNT_SID: ${{ secrets.TWILIO_ACCOUNT_SID }}
           TWILIO_AUTH_TOKEN: ${{ secrets.TWILIO_AUTH_TOKEN }}
           RECIPIENT_PHONE_NUMBER: ${{ secrets.RECIPIENT_PHONE_NUMBER }}
-#       - name: Retrieve secrets
-#         env:
-#             TEST_SENDER_ADDR: ${{ secrets.TEST_SENDER_ADDR }}
-#             TEST_SENDER_PW: ${{ secrets.TEST_SENDER_PW }}
-#             TEST_RECIPIENT_ADDR: ${{ secrets.TEST_RECIPIENT_ADDR }}
-#             SENDER_PHONE_NUMBER: ${{ secrets.SENDER_PHONE_NUMBER }}
-#             PIXELA_API_KEY: ${{ secrets.PIXELA_API_KEY }}
-
+          TEST_SENDER_ADDR: ${{ secrets.TEST_SENDER_ADDR }}
+          TEST_SENDER_PW: ${{ secrets.TEST_SENDER_PW }}
+          TEST_RECIPIENT_ADDR: ${{ secrets.TEST_RECIPIENT_ADDR }}
+          SENDER_PHONE_NUMBER: ${{ secrets.SENDER_PHONE_NUMBER }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
