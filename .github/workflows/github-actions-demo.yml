@@ -1,4 +1,4 @@
-name: GitHub Actions Demo
+name: Python 100 Days of Code
 on:
   push:
     branches:
