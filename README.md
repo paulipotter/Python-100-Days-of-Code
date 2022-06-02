@@ -74,10 +74,12 @@ What you'll see below is a log for every project I do for 100 days of Python Cod
 | 53  | Bot: Data Entry           | ...                                                                                                                                                             | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Intermediate++/Day-53-Data-Entry-Bot/main.py)   |
 
 ### 🕸 Web dev
-| Day | Project             | Progress                                                                                                                                | Link                                                                                                              |
-|-----|---------------------|-----------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| 54  | Intro to Flask      | Refresh on Flask! I worked on Flask a looong time ago, so it's nice to use it again and learn new things about it I didn't know before. | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Intermediate++/Day-54-Flask)              |
-| 55  | Flask: Higher-Lower | Refresh on dynamic URLs, how to debug, use of PIN.                                                                                      | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Intermediate++/Day-55-Flask-Higher-Lower) |
+| Day | Project               | Progress                                                                                                                                | Link                                                                                                              |
+|-----|-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
+| 54  | Intro to Flask        | Refresh on Flask! I worked on Flask a looong time ago, so it's nice to use it again and learn new things about it I didn't know before. | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Intermediate++/Day-54-Flask)              |
+| 55  | Flask: Higher-Lower   | Dynamic URLs, how to debug, use of PIN.                                                                                                 | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Intermediate++/Day-55-Flask-Higher-Lower) |
+| 56  | Flask: Name Card Site | Rendering HTML files, serving static files, use website templates.                                                                      | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Intermediate++/Day-56-Flask-Name-Card)    |
+| 57  | Flask: Blog           | Jinja, URL building, dynamic HTML Pages.                                                                                                | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Intermediate++/Day-55-Flask-Blog)         |
 
 
 
