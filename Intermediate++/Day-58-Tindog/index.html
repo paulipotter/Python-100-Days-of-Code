@@ -2,121 +2,131 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <title>TinDog</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/styles.css">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
-
+    <meta charset="utf-8">
+    <title>TinDog</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;900&family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-  <section id="title">
+<section id="title">
+    <div class="container-fluid">
+        <!-- Nav Bar -->
+        <div class="row">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                    <a class="navbar-brand" href="#">tindog</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-    <!-- Nav Bar -->
-  <nav class="navbar navbar-expand-lg navbar-light">
-  <a class="navbar-brand" href="#">Tindog</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+                    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Pricing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Download</a>
+                            </li>
+                        </ul>
+                    <div>
+                </nav>
         </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
+        <div class="row">
 
+            <!-- Title -->
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <div>
+                    <h1>Meet new and interesting dogs nearby.</h1>
+                    <button type="button" class="btn btn-dark download-button"><i class="fa-brands fa-apple"></i> Download</button>
+                    <button type="button" class="btn btn-outline-light download-button"><i class="fa-brands fa-google-play"></i> Download</button>
+                </div>
+            </div>
 
-    <!-- Title -->
-
-    <div>
-      <h1>Meet new and interesting dogs nearby.</h1>
-      <button type="button">Download</button>
-      <button type="button">Download</button>
+            <!-- Image -->
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <div>
+                    <img src="images/iphone6.png" alt="iphone-mockup" id="iphone-mockup">
+                </div>
+            </div>
+        </div>
     </div>
-    <div>
-      <img src="images/iphone6.png" alt="iphone-mockup">
+    </section>
+
+
+
+<!-- Features -->
+<section id="features">
+
+    <div class="row">
+        <div class="col-lg-4 feature-box">
+            <p class="fa-solid fa-check-circle fa-align-center fa-4x feature-icon"></p>
+            <h3 class="feature-title">Easy to use.</h3>
+            <p class="feature-subtitle">So easy to use, even your dog could do it.</p>
+        </div>
+        <div class="col-lg-4 feature-box">
+            <p class="fa-solid fa-bullseye fa-4x feature-icon"></p>
+            <h3 class="feature-title">Elite Clientele</h3>
+            <p class="feature-subtitle">We have all the dogs, the greatest dogs.</p>
+        </div>
+        <div class="col-lg-4 feature-box">
+            <p class="fa-solid fa-heart fa-4x feature-icon"></p>
+            <h3 class="feature-title">Guaranteed to work.</h3>
+            <p class="feature-subtitle">Find the love of your dog's life or your money back.</p>
+        </div>
     </div>
 
-  </section>
+</section>
 
 
-  <!-- Features -->
+<!-- Testimonials -->
+<section id="testimonials">
 
-  <section id="features">
-
-    <h3>Easy to use.</h3>
-    <p>So easy to use, even your dog could do it.</p>
-
-    <h3>Elite Clientele</h3>
-    <p>We have all the dogs, the greatest dogs.</p>
-
-    <h3>Guaranteed to work.</h3>
-    <p>Find the love of your dog's life or your money back.</p>
-
-  </section>
-
-
-  <!-- Testimonials -->
-
-  <section id="testimonials">
-
-    <h2>I no longer have to sniff other dogs for love. I've found the hottest Corgi on TinDog. Woof.</h2>
-    <img src="images/dog-img.jpg" alt="dog-profile">
+    <h2 class="testimonial-text">I no longer have to sniff other dogs for love. I've found the hottest Corgi on TinDog. Woof.</h2>
+    <img src="images/dog-img.jpg" alt="dog-profile" class="testimonial-image">
     <em>Pebbles, New York</em>
 
     <!-- <h2 class="testimonial-text">My dog used to be so lonely, but with TinDog's help, they've found the love of their life. I think.</h2>
     <img class="testimonial-image" src="images/lady-img.jpg" alt="lady-profile">
     <em>Beverly, Illinois</em> -->
 
-  </section>
+</section>
 
 
-  <!-- Press -->
+<!-- Press -->
 
-  <section id="press">
-    <img src="images/techcrunch.png" alt="tc-logo">
-    <img src="images/tnw.png" alt="tnw-logo">
-    <img src="images/bizinsider.png" alt="biz-insider-logo">
-    <img src="images/mashable.png" alt="mashable-logo">
+<section id="press">
+    <img src="images/techcrunch.png" alt="tc-logo" class="logo">
+    <img src="images/tnw.png" alt="tnw-logo" class="logo">
+    <img src="images/bizinsider.png" alt="biz-insider-logo" class="logo">
+    <img src="images/mashable.png" alt="mashable-logo" class="logo">
 
-  </section>
+</section>
 
 
-  <!-- Pricing -->
+<!-- Pricing -->
 
-  <section id="pricing">
+<section id="pricing">
 
     <h2>A Plan for Every Dog's Needs</h2>
     <p>Simple and affordable price plans for your and your dog.</p>
@@ -146,27 +156,27 @@
     <p>Unlimited App Usage</p>
     <button type="button">Sign Up</button>
 
-  </section>
+</section>
 
 
-  <!-- Call to Action -->
+<!-- Call to Action -->
 
-  <section id="cta">
+<section id="cta">
 
     <h3>Find the True Love of Your Dog's Life Today.</h3>
     <button type="button">Download</button>
     <button type="button">Download</button>
 
-  </section>
+</section>
 
 
-  <!-- Footer -->
+<!-- Footer -->
 
-  <footer id="footer">
+<footer id="footer">
 
     <p>© Copyright 2018 TinDog</p>
 
-  </footer>
+</footer>
 
 
 </body>
