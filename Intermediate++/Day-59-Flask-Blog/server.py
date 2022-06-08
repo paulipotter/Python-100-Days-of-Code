@@ -27,6 +27,12 @@ def about():
     # all_posts = response.json()
     return render_template("about.html")
 
+@app.route('/post')
+def post():
+    # response = requests.get('https://api.npoint.io/bc626e1a1760737d55c2')
+    # all_posts = response.json()
+    return render_template("post.html")
+
 # @app.route("/post/<int:index>")
 # def show_post(index):
 #     requested_post = None
