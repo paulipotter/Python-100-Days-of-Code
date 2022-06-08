@@ -83,6 +83,7 @@ What you'll see below is a log for every project I do for 100 days of Python Cod
 | 58  | Bootstrap: Tindog     | Five hour long 🙇🏻‍ web foundations lesson where we refresh on Bootstrap's magic abilities and create a website from scratch!          | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Intermediate++/Day-58-Bootstrap)          |
 
 ## Advanced  🐔
-| Day | Project        | Progress                                                            | Link                                                                                                |
-|-----|----------------|---------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-| 59  | Flask: Blog II | Apply Flask, Bootstrap to make a revamped blog with better styling. | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Advanced/Day-59-Flask-Blog) |
+| Day | Project                  | Progress                                                                                    | Link                                                                                                               |
+|-----|--------------------------|---------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|
+| 59  | Flask: Blog II           | Apply Flask, Bootstrap to make a revamped blog with better styling.                         | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Advanced/Day-59-Blog)                      |
+| 60  | Blog cont.: Contact Form | Continue to work on blog. Focus on the Contact form and POST/GET requests within html/Flask | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Advanced/Day-60-Contact-Form/contact.html) |
