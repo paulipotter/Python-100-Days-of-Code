@@ -1,4 +1,6 @@
 {% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
 
 {% block title %}Add A New Cafe{% endblock %}
 
@@ -9,9 +11,9 @@
 
       <h1>Add a new cafe into the database</h1>
 
-      <!-- This is where your WTForm will go -->
+      {{ wtf.quick_form(form, novalidate=True) }}
 
-	  <p class="space-above"><a href="#">See all cafes</a></p>
+	  <p class="space-above"><a href="{{ url_for('cafes') }}">See all cafes</a></p>
 
     </div>
   </div>
