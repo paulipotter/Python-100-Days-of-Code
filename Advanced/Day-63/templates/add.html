@@ -5,13 +5,13 @@
     <title>Add Book</title>
 </head>
 <body>
-    <form action="" method="POST">
+    <form action="{{ url_for('add') }}" method="POST">
         <label>Book Name</label>
-        <input type="text">
+        <input name="title" type="text">
         <label>Book Author</label>
-        <input type="text">
+        <input name="author" type="text">
         <label>Rating</label>
-        <input type="text">
+        <input name="rating" type="text">
         <button type="submit">Add Book</button>
     </form>
 </body>
