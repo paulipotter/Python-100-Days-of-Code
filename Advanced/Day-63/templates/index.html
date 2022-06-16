@@ -10,13 +10,11 @@
     <p>Library is Empty</p>
     {% else %}
         <ul>
-            {% for book in all_books %}
+            {% for book in all_books_db %}
             <li>{{ book.title}} - {{ book.author }} - Rating : {{ book.rating }}/10</li>
             {% endfor %}
         </ul>
     {% endif %}
-
 <a href="{{ url_for('add') }}">Add New Book</a>
-
 </body>
 </html>

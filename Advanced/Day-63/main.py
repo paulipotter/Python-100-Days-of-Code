@@ -18,26 +18,40 @@ class Books(db.Model):
     def __repr__(self):
         return '<Author %r>' % self.author
 
+
+db.create_all()
+
+
 @app.route('/')
 def home():
-    return render_template('index.html', all_books=all_books)
+    all_books_db = db.session.query(Books).all()
+    return render_template('index.html', all_books_db=all_books_db)
 
 
 @app.route("/add", methods=["GET", "POST"])
 def add():
     if request.method == "POST":
-        book_submission = {
-            "title": request.form['title'],
-            "author": request.form['author'],
-            "rating": request.form['rating']
-        }
+        book_submission = Books(title=request.form['title'], author=request.form['author'], rating=request.form['rating'])
 
-        all_books.append(book_submission)
+        db.session.add(book_submission)
+        db.session.commit()
+
+        # book_submission = {
+        #     "title": request.form['title'],
+        #     "author": request.form['author'],
+        #     "rating": request.form['rating']
+        # }
+        #
+        # all_books.append(book_submission)
 
         return redirect(url_for('home'))
 
     return render_template('add.html')
 
+
+@app.route('/edit')
+def edit():
+    return render_template('edit.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
