@@ -24,6 +24,7 @@ db.create_all()
 
 @app.route('/')
 def home():
+
     all_books_db = db.session.query(Books).all()
     return render_template('index.html', all_books_db=all_books_db)
 
@@ -49,9 +50,21 @@ def add():
     return render_template('add.html')
 
 
-@app.route('/edit')
+@app.route('/edit', methods=["GET", "POST"])
 def edit():
-    return render_template('edit.html')
+    if request.method == "POST":
+        #  use the ID gotten in the form to query the same book from the database
+        update_book = Books.query.get(request.form['id'])
+        update_book.rating = request.form['rating']
+        db.session.commit()
+        return redirect(url_for('home'))
+    book = Books.query.get(request.args.get('id'))
+    return render_template('edit.html', book=book)
+
+@app.route('/delete')
+def edit():
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)
