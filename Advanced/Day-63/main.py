@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, redirect, url_for
-import sqlite3
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
@@ -8,6 +7,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 all_books = []
+
 
 class Books(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -32,7 +32,9 @@ def home():
 @app.route("/add", methods=["GET", "POST"])
 def add():
     if request.method == "POST":
-        book_submission = Books(title=request.form['title'], author=request.form['author'], rating=request.form['rating'])
+        book_submission = Books(title=request.form['title'],
+                                author=request.form['author'],
+                                rating=request.form['rating'])
 
         db.session.add(book_submission)
         db.session.commit()
@@ -58,14 +60,29 @@ def edit():
         update_book.rating = request.form['rating']
         db.session.commit()
         return redirect(url_for('home'))
-    book = Books.query.get(request.args.get('id'))
-    return render_template('edit.html', book=book)
+
+    # Get book id of book that will be deleted
+    book_id = request.args.get('id')
+
+    # Query book that was chosen to edit rating
+    book_selected = Books.query.get(book_id)
+    return render_template("edit_rating.html", book=book_selected)
+
 
 @app.route('/delete')
-def edit():
+def delete():
+    # Get book id that's passed in
+    book_id = request.args.get('book_id')
+    print("book id is", book_id)
+    # Query book using ID
+    book = Books.query.get(book_id)
+    print("book is", book)
 
+    # Delete the previously queried record
+    db.session.delete(book)
+    db.session.commit()
+    return redirect(url_for('home'))
 
 
 if __name__ == "__main__":
     app.run(debug=True)
-
