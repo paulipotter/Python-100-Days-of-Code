@@ -66,7 +66,7 @@ def edit():
 
     # Query book that was chosen to edit rating
     book_selected = Books.query.get(book_id)
-    return render_template("edit_rating.html", book=book_selected)
+    return render_template("edit.html", book=book_selected)
 #edit for push
 
 
