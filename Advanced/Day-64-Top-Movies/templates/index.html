@@ -17,7 +17,8 @@
   <p class="description">These are my all time favourite movies.</p>
    {% for movie in all_movies_db %}
   <div class="card" >
-    <div class="front" style="background-image:url('{{ movie.img_url }}');">
+    <!--suppress CssUnknownTarget -->
+      <div class="front" style="background-image:url('{{ movie.img_url }}');">
         <p class="large">1</p>
     </div>
     <div class="back">
@@ -32,7 +33,7 @@
             {{movie.description}}
         </p>
 
-        <a href="#" class="button">Update</a>
+        <a href="{{ url_for('edit', id=movie.id) }}" class="button">Update</a>
         <a href="#" class="button delete-button">Delete</a>
 
       </div>

@@ -2,7 +2,7 @@ from flask import Flask, render_template, redirect, url_for, request
 from flask_bootstrap import Bootstrap
 from flask_sqlalchemy import SQLAlchemy
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField
+from wtforms import StringField, SubmitField, FloatField
 from wtforms.validators import DataRequired
 import requests
 
@@ -27,6 +27,14 @@ class Movies(db.Model):
     def __repr__(self):
         return '<Author %r>' % self.author
 
+
+class RateMovieForm(FlaskForm):
+    rating = FloatField('Enter your Rating', validators=[DataRequired()])
+    review = StringField('Enter your Review', validators=[DataRequired()])
+    submit = SubmitField('Submit')
+
+
+
 new_movie = Movies(
     title="Phone Booth",
     year=2002,
@@ -44,6 +52,22 @@ db.create_all()
 def home():
     all_movies_db = db.session.query(Movies).all()
     return render_template("index.html", all_movies_db=all_movies_db)
+
+
+@app.route('/edit', methods=["GET", "POST"])
+def edit():
+    form = RateMovieForm()
+    if form.validate_on_submit():
+        movie_id = request.args.get('id')
+        update_movie = Movies.query.get(movie_id)
+        update_movie.rating = form.rating.data
+        update_movie.review = form.review.data
+        db.session.commit()
+        return redirect(url_for('home'))
+    # Retrieve movie and render edit.html
+    movie_id = request.args.get('id')
+    movie_to_update = Movies.query.get(movie_id)
+    return render_template("edit.html", movie=movie_to_update, form=form)
 
 
 if __name__ == '__main__':
