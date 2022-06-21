@@ -34,6 +34,10 @@ class RateMovieForm(FlaskForm):
     submit = SubmitField('Submit')
 
 
+class AddMovie(FlaskForm):
+    movie_name = StringField("Enter the movie you'd like to add", validators=[DataRequired()])
+    submit = SubmitField('Submit')
+
 
 new_movie = Movies(
     title="Phone Booth",
@@ -52,6 +56,14 @@ db.create_all()
 def home():
     all_movies_db = db.session.query(Movies).all()
     return render_template("index.html", all_movies_db=all_movies_db)
+
+
+@app.route("/add")
+def add():
+    form = AddMovie()
+    if form.validate_on_submit():
+        pass
+    return render_template("add.html", form=form)
 
 
 @app.route('/edit', methods=["GET", "POST"])
