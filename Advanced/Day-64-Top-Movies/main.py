@@ -4,6 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, FloatField
 from wtforms.validators import DataRequired
+import os
 import requests
 
 app = Flask(__name__)
@@ -12,6 +13,11 @@ app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///my-top-movies.db"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 Bootstrap(app)
 db = SQLAlchemy(app)
+
+TMDB_KEY = '2d5ae3434a2d858e241695df5c9948d5'  # os.environ.get('TMDB_KEY')
+TMDB_URL = 'https://api.themoviedb.org/3/search/movie'
+MOVIE_DB_IMAGE_URL = "https://image.tmdb.org/t/p/w500"
+
 
 
 class Movies(db.Model):
@@ -58,11 +64,28 @@ def home():
     return render_template("index.html", all_movies_db=all_movies_db)
 
 
-@app.route("/add")
+@app.route("/add", methods=["GET", "POST"])
 def add():
     form = AddMovie()
     if form.validate_on_submit():
-        pass
+        result_list = []
+        parameters = {
+            'api_key': TMDB_KEY,
+            'language': 'en-US',
+            'query': form.movie_name.data
+        }
+        response = requests.get(TMDB_URL, params=parameters)
+        response.raise_for_status()
+        data = response.json()
+        print(data)
+        for movie in data['results']:
+            new_movie = {
+                'id': movie['id'],
+                'title': movie['original_title'],
+                'release_date': movie['release_date']
+            }
+            result_list.append(new_movie)
+        return render_template("select.html", movie_list=result_list )
     return render_template("add.html", form=form)
 
 
@@ -89,6 +112,28 @@ def delete():
     db.session.delete(movie_to_delete)
     db.session.commit()
     return redirect(url_for('home'))
+
+@app.route('/fetch-selected-movie')
+def get_selected_movie():
+    movie_id = request.args.get('id')
+    MOVIE_DB_INFO_URL = f'https://api.themoviedb.org/3/movie/{movie_id}'
+    parameters = {
+        'api_key': TMDB_KEY
+    }
+    movie_api_id = request.args.get("id")
+    if movie_api_id:
+        movie_api_url = f"{MOVIE_DB_INFO_URL}/{movie_api_id}"
+        response = requests.get(movie_api_url, params={"api_key": TMDB_KEY, "language": "en-US"})
+        data = response.json()
+        new_movie = Movies(
+            title=data["title"],
+            year=data["release_date"].split("-")[0],
+            img_url=f"{MOVIE_DB_IMAGE_URL}{data['poster_path']}",
+            description=data["overview"]
+        )
+        db.session.add(new_movie)
+        db.session.commit()
+    return redirect(url_for("edit"))
 
 
 if __name__ == '__main__':
