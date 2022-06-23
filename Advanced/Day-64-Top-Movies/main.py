@@ -8,30 +8,31 @@ import os
 import requests
 
 app = Flask(__name__)
+# SECRET_KEY = os.urandom(32)
 app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
+
+# Create DB
 app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///my-top-movies.db"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 Bootstrap(app)
 db = SQLAlchemy(app)
 
-TMDB_KEY = '2d5ae3434a2d858e241695df5c9948d5'  # os.environ.get('TMDB_KEY')
+TMDB_KEY = os.environ.get('TMDB_KEY')
 TMDB_URL = 'https://api.themoviedb.org/3/search/movie'
 MOVIE_DB_IMAGE_URL = "https://image.tmdb.org/t/p/w500"
 
 
-
+# Create table
 class Movies(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(100), unique=True, nullable=False)
     year = db.Column(db.Integer, nullable=False)
     description = db.Column(db.String(300), unique=False, nullable=False)
-    rating = db.Column(db.Float, nullable=False)
-    ranking = db.Column(db.Integer, nullable=False)
-    review = db.Column(db.String(200), unique=False, nullable=False)
+    rating = db.Column(db.Float, nullable=True)
+    ranking = db.Column(db.Integer, nullable=True)
+    review = db.Column(db.String(200), unique=False, nullable=True)
     img_url = db.Column(db.String(300), unique=False, nullable=False)
 
-    def __repr__(self):
-        return '<Author %r>' % self.author
 
 
 class RateMovieForm(FlaskForm):
@@ -58,51 +59,43 @@ db.create_all()
 # db.session.add(new_movie)
 # db.session.commit()
 
+
 @app.route("/")
 def home():
-    all_movies_db = db.session.query(Movies).all()
-    return render_template("index.html", all_movies_db=all_movies_db)
+    all_movies = Movies.query.order_by(Movies.rating).all()
+    print(all_movies)
+    for i in range(len(all_movies)):
+        all_movies[i].ranking = len(all_movies) - i
+    db.session.commit()
+    return render_template("index.html", all_movies=all_movies)
 
 
 @app.route("/add", methods=["GET", "POST"])
 def add():
     form = AddMovie()
     if form.validate_on_submit():
-        result_list = []
         parameters = {
             'api_key': TMDB_KEY,
-            'language': 'en-US',
             'query': form.movie_name.data
         }
         response = requests.get(TMDB_URL, params=parameters)
         response.raise_for_status()
-        data = response.json()
-        print(data)
-        for movie in data['results']:
-            new_movie = {
-                'id': movie['id'],
-                'title': movie['original_title'],
-                'release_date': movie['release_date']
-            }
-            result_list.append(new_movie)
-        return render_template("select.html", movie_list=result_list )
+        data = response.json()['results']
+        return render_template("select.html", options=data)
     return render_template("add.html", form=form)
 
 
 @app.route('/edit', methods=["GET", "POST"])
 def edit():
     form = RateMovieForm()
+    movie_id = request.args.get("id")
+    movie = Movies.query.get(movie_id)
     if form.validate_on_submit():
-        movie_id = request.args.get('id')
-        update_movie = Movies.query.get(movie_id)
-        update_movie.rating = form.rating.data
-        update_movie.review = form.review.data
+        movie.rating = float(form.rating.data)
+        movie.review = form.review.data
         db.session.commit()
         return redirect(url_for('home'))
-    # Retrieve movie and render edit.html
-    movie_id = request.args.get('id')
-    movie_to_update = Movies.query.get(movie_id)
-    return render_template("edit.html", movie=movie_to_update, form=form)
+    return render_template("edit.html", movie=movie, form=form)
 
 
 @app.route('/delete')
@@ -113,18 +106,17 @@ def delete():
     db.session.commit()
     return redirect(url_for('home'))
 
-@app.route('/fetch-selected-movie')
-def get_selected_movie():
-    movie_id = request.args.get('id')
-    MOVIE_DB_INFO_URL = f'https://api.themoviedb.org/3/movie/{movie_id}'
-    parameters = {
-        'api_key': TMDB_KEY
-    }
-    movie_api_id = request.args.get("id")
+
+@app.route('/find')
+def find():
+    movie_api_id = request.args.get('id')
+    MOVIE_DB_INFO_URL = f'https://api.themoviedb.org/3/movie/'
+
     if movie_api_id:
         movie_api_url = f"{MOVIE_DB_INFO_URL}/{movie_api_id}"
         response = requests.get(movie_api_url, params={"api_key": TMDB_KEY, "language": "en-US"})
         data = response.json()
+        print("DATA", data)
         new_movie = Movies(
             title=data["title"],
             year=data["release_date"].split("-")[0],
@@ -133,7 +125,7 @@ def get_selected_movie():
         )
         db.session.add(new_movie)
         db.session.commit()
-    return redirect(url_for("edit"))
+    return redirect(url_for("edit", id=new_movie.id))
 
 
 if __name__ == '__main__':

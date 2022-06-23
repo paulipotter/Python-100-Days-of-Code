@@ -15,30 +15,27 @@
 <div class="container">
   <h1 class="heading">My Top 10 Movies</h1>
   <p class="description">These are my all time favourite movies.</p>
-   {% for movie in all_movies_db %}
-  <div class="card" >
-    <!--suppress CssUnknownTarget -->
-      <div class="front" style="background-image:url('{{ movie.img_url }}');">
-        <p class="large">1</p>
-    </div>
-    <div class="back">
-      <div>
-    <div class="title">{{movie.title}} <span class="release_date">({{movie.year}})</span></div>
-        <div class="rating">
-            <label>{{movie.rating}}</label>
-          <i class="fas fa-star star"></i>
-        </div>
-          <p class="review">"{{movie.review}}"</p>
-        <p class="overview">
-            {{movie.description}}
-        </p>
+   {% for movie in all_movies %}
+          <div class="card" >
+            <div class="front" style="background-image: url('{{movie.img_url}}');">
+                <p class="large">{{ movie.ranking }}</p>
+            </div>
+            <div class="back">
+              <div>
+            <div class="title">{{movie.title}} <span class="release_date">({{movie.year}})</span></div>
+                <div class="rating">
+                    <label>{{movie.rating}}</label>
+                  <i class="fas fa-star star"></i>
+                </div>
+                  <p class="review">"{{movie.review}}"</p>
+                <p class="overview">{{movie.description}}</p>
 
-        <a href="{{ url_for('edit', id=movie.id) }}" class="button">Update</a>
-        <a href="{{ url_for('delete', id=movie.id) }}" class="button delete-button">Delete</a>
+                <a href="{{ url_for('edit', id=movie.id) }}" class="button">Update</a>
+                <a href="{{ url_for('delete', id=movie.id) }}" class="button delete-button">Delete</a>
 
-      </div>
-    </div>
-  </div>
+              </div>
+            </div>
+          </div>
     {% endfor %}
 </div>
 <div class="container text-center add">
