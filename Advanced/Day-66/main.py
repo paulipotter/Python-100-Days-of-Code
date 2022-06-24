@@ -64,6 +64,16 @@ def random():
     random_cafe = choice(cafes)
     return jsonify(cafe=random_cafe.to_dict())
 
+@app.route("/search")
+def search():
+    query_location = request.args.get("loc")
+    cafe = db.session.query(Cafe).filter_by(location=query_location).first()
+    if cafe:
+        return jsonify(cafe=cafe.to_dict())
+    else:
+        return jsonify(error={"Not Found": "Sorry, we don't have a cafe at that location."})
+    pass
+
 
 if __name__ == '__main__':
     app.run(debug=True)
