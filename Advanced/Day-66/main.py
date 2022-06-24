@@ -51,8 +51,26 @@ def home():
 ## HTTP PUT/PATCH - Update Record
 
 ## HTTP DELETE - Delete Record
+@app.route("/add", methods=["POST"])
+def add_cafe():
+    new_cafe = Cafe(
+        name=request.form.get("name"),
+        map_url=request.form.get("map_url"),
+        img_url=request.form.get("img_url"),
+        location=request.form.get("loc"),
+        has_sockets=bool(request.form.get("sockets")),
+        has_toilet=bool(request.form.get("toilet")),
+        has_wifi=bool(request.form.get("wifi")),
+        can_take_calls=bool(request.form.get("calls")),
+        seats=request.form.get("seats"),
+        coffee_price=request.form.get("coffee_price"),
+    )
+    db.session.add(new_cafe)
+    db.session.commit()
+    return jsonify(response={"success": "Successfully added the new cafe."})
 
-@app.route("/all")
+
+@app.route("/all", methods=["GET"])
 def all():
     cafes = db.session.query(Cafe).all()
     return jsonify(cafes=[cafe.to_dict() for cafe in cafes])
@@ -64,7 +82,8 @@ def random():
     random_cafe = choice(cafes)
     return jsonify(cafe=random_cafe.to_dict())
 
-@app.route("/search")
+
+@app.route("/search", methods=["GET"])
 def search():
     query_location = request.args.get("loc")
     cafe = db.session.query(Cafe).filter_by(location=query_location).first()
@@ -72,7 +91,6 @@ def search():
         return jsonify(cafe=cafe.to_dict())
     else:
         return jsonify(error={"Not Found": "Sorry, we don't have a cafe at that location."})
-    pass
 
 
 if __name__ == '__main__':
