@@ -1,5 +1,8 @@
 {% extends 'bootstrap/base.html' %}
 
+# Add import for bootstrap wtf quickform support
+{% import "bootstrap/wtf.html" as wtf %}
+
 {% block content %}
 {% include "header.html" %}
   <!-- Page Header -->
@@ -20,9 +23,15 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
-        
-          <!-- This is where the form will go -->
 
+        #Load ckeditor
+        {{ ckeditor.load() }}
+
+        #Configure the ckeditor to tell it which field in WTForm will need to be a CKEditor.
+        {{ ckeditor.config(name='body') }}
+
+        #Add WTF quickform
+        {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "primary"}) }}
       </div>
     </div>
   </div>
