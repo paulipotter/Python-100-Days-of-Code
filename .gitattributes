@@ -1,12 +1,4 @@
-Intermediate++/Day-56-Flask-Name-Card/static/** linguist-vendored
-Intermediate++/Day-56-Flask-Name-Card/static/sass/** linguist-vendored
-Intermediate++/Day-57-Flask-Blog/static/** linguist-vendored
-Intermediate++/Day-58-Tindog/css/** linguist-vendored
-Advanced/Day-59-Blog/static/css/** linguist-vendored
-Advanced/Day-59-Blog/static/css/styles.css linguist-vendored
-Advanced/Day-60-Contact-Form/static/** linguist-vendored
-Advanced/Day-62-Coffee-Wifi/static/** linguist-vendored
-Advanced/Day-64-Top-Movies/static/** linguist-vendored
-Advanced/Day-67-Blog/static/** linguist-vendored
-Advanced/Day-67-Blog/static/vendor/** linguist-vendored
-
+static/** linguist-vendored
+vendor/** linguist-vendored
+css/* linguist-vendored
+sass/* linguist-vendored
