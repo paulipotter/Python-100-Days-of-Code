@@ -32,6 +32,11 @@ def home():
 def register():
     if request.method == "POST":
         data = request.form
+        #  If email already exists
+        if User.query.filter_by(email=data['email']).first():
+            flash('email already exists, you should log in instead')
+            return redirect(url_for('login'))
+
         encrypted_password = generate_password_hash(password=data['password'],
                                                     method='pbkdf2:sha256',
                                                     salt_length=8)
@@ -54,13 +59,20 @@ def login():
         email = request.form.get('email')
         password = request.form.get('password')
 
-        # Find user by email entered.
+        # If email exists
         user = User.query.filter_by(email=email).first()
+        if user:
+            # Check stored password hash against entered password hashed.
+            if check_password_hash(user.password, password):
+                login_user(user)
+                return redirect(url_for('secrets'))
+            else:  # bad password
+                flash('Password incorrect, please try again')
+                return redirect(url_for('login'))
 
-        # Check stored password hash against entered password hashed.
-        if check_password_hash(user.password, password):
-            login_user(user)
-            return redirect(url_for('secrets'))
+        else:  # not user
+            flash("The email does not exist, please try again")
+            return redirect(url_for('login'))
 
     return render_template("login.html")
 
