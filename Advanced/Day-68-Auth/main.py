@@ -13,6 +13,12 @@ db = SQLAlchemy(app)
 login_manager = LoginManager()
 login_manager.init_app(app)
 
+
+@login_manager.user_loader
+def load_user(user_id):
+    return User.query.get(int(user_id))
+
+
 ##CREATE TABLE IN DB
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -25,7 +31,7 @@ class User(UserMixin, db.Model):
 
 @app.route('/')
 def home():
-    return render_template("index.html")
+    return render_template("index.html", logged_in=current_user.is_authenticated)
 
 
 @app.route('/register', methods=["GET", "POST"])
@@ -50,10 +56,10 @@ def register():
 
         return redirect(url_for('secrets', name=data['name']))
 
-    return render_template("register.html")
+    return render_template("register.html", logged_in=current_user.is_authenticated)
 
 
-@app.route('/login')
+@app.route('/login', methods=["GET", "POST"])
 def login():
     if request.method == "POST":
         email = request.form.get('email')
@@ -74,14 +80,14 @@ def login():
             flash("The email does not exist, please try again")
             return redirect(url_for('login'))
 
-    return render_template("login.html")
+    return render_template("login.html", logged_in=current_user.is_authenticated)
 
 
 @app.route('/secrets')
 @login_required
 def secrets():
     print(current_user.name)
-    return render_template("secrets.html", name=current_user.name)
+    return render_template("secrets.html", name=current_user.name, logged_in=True)
 
 
 @app.route('/logout')
