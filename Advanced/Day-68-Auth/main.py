@@ -29,9 +29,12 @@ def home():
 def register():
     if request.method == "POST":
         data = request.form
+        encrypted_password = generate_password_hash(password=data['password'],
+                                                    method='pbkdf2:sha256',
+                                                    salt_length=8)
         new_user = User(name=data['name'],
                         email=data['email'],
-                        password=data['password'])
+                        password=encrypted_password)
         db.session.add(new_user)
         db.session.commit()
         return redirect(url_for('secrets', name=data['name']))
