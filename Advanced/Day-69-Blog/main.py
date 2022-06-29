@@ -8,7 +8,8 @@ from sqlalchemy.orm import relationship
 from flask_login import UserMixin, login_user, LoginManager, login_required, current_user, logout_user
 from forms import CreatePostForm, RegisterForm, LoginForm
 from flask_gravatar import Gravatar
-from wtforms.validators import DataRequired, URL, Email, InputRequired, EqualTo
+from functools import wraps
+from flask import abort
 
 
 app = Flask(__name__)
@@ -47,6 +48,18 @@ db.create_all()
 
 login_manager = LoginManager()
 login_manager.init_app(app)
+
+
+def admin_only(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        #If id is not 1 then return abort with 403 error
+        if current_user.id != 1:
+            return abort(403)
+        #Otherwise continue with the route function
+        return f(*args, **kwargs)
+    return decorated_function
+
 
 @login_manager.user_loader
 def load_user(user_id):
@@ -118,6 +131,7 @@ def login():
 
 @app.route('/logout')
 def logout():
+    logout_user()
     return redirect(url_for('get_all_posts'))
 
 
@@ -137,6 +151,7 @@ def contact():
     return render_template("contact.html", current_user=current_user)
 
 
+@admin_only
 @app.route("/new-post")
 def add_new_post():
     form = CreatePostForm()
@@ -155,6 +170,7 @@ def add_new_post():
     return render_template("make-post.html", form=form, current_user=current_user)
 
 
+@admin_only
 @app.route("/edit-post/<int:post_id>")
 def edit_post(post_id):
     post = BlogPost.query.get(post_id)
@@ -177,6 +193,7 @@ def edit_post(post_id):
     return render_template("make-post.html", form=edit_form, current_user=current_user, is_edit=True)
 
 
+@admin_only
 @app.route("/delete/<int:post_id>")
 def delete_post(post_id):
     post_to_delete = BlogPost.query.get(post_id)
