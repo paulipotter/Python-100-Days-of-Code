@@ -30,14 +30,13 @@
             </h3>
           </a>
           <p class="post-meta">Posted by
-            {{post.author}}
-            on {{post.date}}
 
-<!--        If user id is 1 then they can see the delete button -->
+            #Changed from post.author as post.author is now a User object.
+            {{post.author.name}}
+            on {{post.date}}
             {% if current_user.id == 1: %}
             <a href="{{url_for('delete_post', post_id=post.id) }}">✘</a>
             {% endif %}
-
           </p>
         </div>
         {% endfor %}

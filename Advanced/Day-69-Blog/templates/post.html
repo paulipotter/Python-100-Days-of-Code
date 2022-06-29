@@ -4,7 +4,7 @@
 {% block content %}
 {% include "header.html" %}
 
-  <!-- Page Header -->
+ <!-- Page Header -->
   <header class="masthead" style="background-image: url('{{post.img_url}}')">
     <div class="overlay"></div>
     <div class="container">
@@ -14,7 +14,9 @@
             <h1>{{post.title}}</h1>
             <h2 class="subheading">{{post.subtitle}}</h2>
             <span class="meta">Posted by
-              {{post.author}}
+
+              #Changed from post.author
+              {{post.author.name}}
               on {{post.date}}</span>
           </div>
         </div>
