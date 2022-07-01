@@ -100,7 +100,8 @@ What you'll see below is a log for every project I do for 100 days of Python Cod
 | 70  | Finale: Publish Blog     | Quick tutorial on how to publish the blog using heroku and git.                                                                                             | [Site!!](https://paulas-flask.herokuapp.com)                                                                       |
 
 ### Data Science with Jupyter Notebooks 🪐
-| Day | Project            | Progress                                                    | Link                                                                                                        |
-|-----|--------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
-| 71  | Data Exploration   | Pandas refresh and intro to Jupyter Notebook/Colaboratory.  | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Advanced/Day-71-Data-Exploration)   |
-| 72  | Data Visualization | Build up on previous day's knowledge - Intro to matplotlib. | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Advanced/Day-72-Data-Visualization) |
+| Day | Project                         | Progress                                                    | Link                                                                                                      |
+|-----|---------------------------------|-------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
+| 71  | Salaries by College Major       | Pandas refresh and intro to Jupyter Notebook/Colaboratory.  | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Advanced/Day-71-Data-Exploration) |
+| 72  | Programming Language popularity | Build up on previous day's knowledge - Intro to matplotlib. | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Advanced/Day-72-Data-Analysis)    |
+| 73  | Lego data over the years        | Continue working on data analysis and matplotlib.           | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Advanced/Day-73-Data-Analysis)    |
