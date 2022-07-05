@@ -34,4 +34,4 @@ Advanced/Day-69-Blog/static/** linguist-vendored
 *.pyo    binary
 
 # Jupyter notebook
-*.ipynb  linguist-vendored
+*.ipynb  linguist-documentation
