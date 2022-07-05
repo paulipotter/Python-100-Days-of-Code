@@ -22,7 +22,6 @@ Advanced/Day-69-Blog/static/** linguist-vendored
 *.pyw    text diff=python
 *.pyx    text diff=python
 *.pyz    text diff=python
-*.ipynb  text diff=python
 
 # Binary files
 # ============
@@ -35,4 +34,4 @@ Advanced/Day-69-Blog/static/** linguist-vendored
 *.pyo    binary
 
 # Jupyter notebook
-*.ipynb  text
+*.ipynb  text diff=python
