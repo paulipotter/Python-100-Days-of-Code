@@ -22,7 +22,7 @@ Advanced/Day-69-Blog/static/** linguist-vendored
 *.pyw    text diff=python
 *.pyx    text diff=python
 *.pyz    text diff=python
-*.ipynb linguist-language=Python
+*.ipynb  text diff=python
 
 # Binary files
 # ============
