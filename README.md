@@ -108,3 +108,8 @@ What you'll see below is a log for every project I do for 100 days of Python Cod
 | 74  | Google Trends                   | Data resampling and how to visualize a time series.         | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Advanced/Day-74-Data-Analysis)    |
 | 75  | Android App Store               | Intro to plotly charts.                                     | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Advanced/Day-75-Data-Analysis)    |
 | 75  | Android App Store               | Computation with numpy and n-dimensional arrrays.           | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Advanced/Day-76-Data-Analysis)    |
+
+## Portfolio material
+| Day | Project              | Description                             | Link                                                                                                 |
+|-----|----------------------|-----------------------------------------|------------------------------------------------------------------------------------------------------|
+| 81  | Morse Code Converter | Convert morse code to english and back. | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Portfolio/Day-81-Morse-Code) |
