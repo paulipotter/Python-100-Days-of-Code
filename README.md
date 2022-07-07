@@ -113,4 +113,9 @@ What you'll see below is a log for every project I do for 100 days of Python Cod
 | 79  | History of handwashing          | Intro to histograms, Kernel Density Estimates, SciPy.       | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Advanced/Day-79-Data-Analysis)    |
 | 80  | Predict Housing Market          | Intro on how to run a multivariable regression.             | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Advanced/Day-80-Data-Analysis)    |
 
-Days 81-100 will be in different repos, will post link here as I go
+
+## Portfolio material 📚
+| Day | Project              | Description                             | Link                                                                                                 |
+|-----|----------------------|-----------------------------------------|------------------------------------------------------------------------------------------------------|
+| 81  | Morse Code Converter | Convert morse code to english and back. | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Portfolio/Day-81-Morse-Code) |
+
