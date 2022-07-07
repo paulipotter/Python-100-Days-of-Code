@@ -18,16 +18,31 @@ ENGLISH_TO_MORSE = {'A': '.-', 'B': '-...',
 def english_to_morse(message):
     print(f'upper is {message}')
 
-    morse = ""
+    morse = []
     for letter in message:
         if ENGLISH_TO_MORSE.get(letter) is not None:
             morse += ENGLISH_TO_MORSE[letter]
         elif letter == ' ':
-            morse += ' '
+            pass
         else:
             morse += letter
-    print(morse)
+    return ' '.join(morse)
+
+
+def morse_to_english(message):
+    morse_to_english = {}
+    for key, value in ENGLISH_TO_MORSE.items():
+        morse_to_english[value] = key
+
+    message = message.split(' ')
+    plain_text = []
+    for code in message:
+        if code in morse_to_english:
+            plain_text += morse_to_english[code]
+    print(plain_text)
+    return ' '.join(plain_text)
 
 
 msg = input("what message do you want to encrypt? ").upper()
-english_to_morse(msg)
+# english_to_morse(msg)
+print(morse_to_english(msg))
