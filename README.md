@@ -107,9 +107,15 @@ What you'll see below is a log for every project I do for 100 days of Python Cod
 | 73  | Lego data over the years        | Aggregate and merge data with Pandas and matplotlib.        | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Advanced/Day-73-Data-Analysis)    |
 | 74  | Google Trends                   | Data resampling and how to visualize a time series.         | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Advanced/Day-74-Data-Analysis)    |
 | 75  | Android App Store               | Intro to plotly charts.                                     | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Advanced/Day-75-Data-Analysis)    |
-| 75  | Android App Store               | Computation with numpy and n-dimensional arrrays.           | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Advanced/Day-76-Data-Analysis)    |
+| 76  | Android App Store               | Intro to Numpy.                                             | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Advanced/Day-76-Data-Analysis)    |
+| 77  | Movie budget and revenue data   | Intro to Seaborn data visualization, scikit-learn.          | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Advanced/Day-77-Data-Analysis)    |
+| 78  | Nobel Prize                     | Intro to bar charts, sunburst charts, Seaborn cont.         | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Advanced/Day-78-Data-Analysis)    |
+| 79  | History of handwashing          | Intro to histograms, Kernel Density Estimates, SciPy.       | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Advanced/Day-79-Data-Analysis)    |
+| 80  | Predict Housing Market          | Intro on how to run a multivariable regression.             | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Advanced/Day-80-Data-Analysis)    |
 
-## Portfolio material
+
+## Portfolio material 📚
 | Day | Project              | Description                             | Link                                                                                                 |
 |-----|----------------------|-----------------------------------------|------------------------------------------------------------------------------------------------------|
 | 81  | Morse Code Converter | Convert morse code to english and back. | [Repo](https://github.com/paulipotter/Python-100-Days-of-Code/tree/main/Portfolio/Day-81-Morse-Code) |
+
